@@ -1,7 +1,5 @@
 # Porsche GT3 RS Webpage
 
-Here's the text with justified alignment:
-
 ## Overview
 Welcome to the Porsche GT3 RS webpage! This site is dedicated to showcasing the incredible features, specifications, and stunning visuals of the Porsche 911 GT3 RS, a high-performance sports car that embodies the spirit of racing and luxury. Whether you're a car enthusiast, a potential buyer, or simply curious about this iconic vehicle, this webpage provides all the information you need. This project is purely for knowledge, and as a car enthusiast, I really wish to buy one someday!
 
