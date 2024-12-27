@@ -1,0 +1,791 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f8f8f8;
+}
+
+h1, h2, h3, h4 {
+    color: #000;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #e60012;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #e60012;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #cc000f;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #000; /* Black background for the navbar */
+    color: #fff; /* White text color */
+    padding: 15px 20px; /* Padding around the navbar */
+    position: fixed; /* Fixed position at the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+.navbar-container {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between logo, title, and links */
+    align-items: center; /* Center items vertically */
+}
+
+.navbar-logo {
+    display: flex; /* Flexbox for logo */
+    align-items: center; /* Center logo vertically */
+}
+
+.logo-image {
+    height: 50px; /* Set the height of the logo */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 15px; /* Space between logo and title */
+}
+
+.navbar-title {
+    font-size: 24px; /* Font size for the Porsche text */
+    font-family: Porsche next, sans-serif;
+    font-weight: bold; /* Bold font for the title */
+    text-align: center; /* Center the text */
+    flex-grow: 1; /* Allow the title to take up available space */
+}
+
+.navbar-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+    margin: 0; /* Remove default margin */
+    padding: 0;
+    margin-right: 30px; /* Remove default padding */
+}
+
+.navbar-links li {
+    margin: 0 15px; /* Space between links */
+}
+
+.navbar-links a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* White text color */
+    font-size: 16px; /* Font size for links */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-links a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar-links {
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Full width for links */
+    }
+
+    .navbar-links li {
+        margin: 10px 0; /* Space between links */
+    }
+}
+
+/* Hero Section Styles */
+.hero-section { /* Replace with the actual image path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    text-align: center; /* Center text */
+    font-size: 200px;
+    font-family: porsche sans-serif;
+    color: #c4c4c5;
+    padding-top: 80px; /* Space from the top */
+}
+
+.bacckground-text {
+    font-size: 400px; /* Large font size */
+    margin: 0; /* Remove default margin */
+}
+
+.image-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    width: 100%; /* Full width of the container */
+}
+
+.hero-image {
+    width: 100%; /* Set width to 100% to fill the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 1200px; /* Optional: set a maximum width for larger screens */
+    border-radius: 10px; /* Optional: add rounded corners */}
+/* Hero Section */
+.hero {
+    position: relative;
+    background-image: url('hero.jpg'); /* Replace with the actual image path */
+    background-size: cover;
+    background-position: center;
+    color: rgb(26, 20, 20);
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+/* For Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .hero-section {
+        font-size: 150px; /* Adjust font size for tablets */
+        padding-top: 60px; /* Reduce padding for smaller screens */
+    }
+
+    .background-text {
+        font-size: 300px; /* Adjust background text size for tablets */
+    }
+
+    .hero-image {
+        max-width: 90%; /* Allow the image to take up more width */
+    }
+}
+
+/* Models Section Styles */
+.models-section {
+    padding: 50px 20px; /* Add padding around the section */
+    background-color: #f8f8f8; /* Light background color for contrast */
+    text-align: center; /* Center align text within the section */
+}
+
+.models-section h1 {
+    font-size: 48px; /* Large font size for the heading */
+    font-weight: bold; /* Bold font weight */
+    color: #000; /* Black color for the text */
+    margin: 0; /* Remove default margin */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    letter-spacing: 2px; /* Increase letter spacing for a more dramatic effect */
+    position: relative; /* Position relative for pseudo-elements */
+}
+
+.models-section h1::after {
+    content: ""; /* Empty content for the pseudo-element */
+    display: block; /* Make it a block element */
+    width: 50px; /* Width of the underline */
+    height: 4px; /* Height of the underline */
+    background-color: #ffcc00; /* Color of the underline */
+    margin: 20px auto 0; /* Center the underline and add margin */
+}
+
+/* Styles for the paragraph in the models section */
+.models-section p {
+    font-size: 18px; /* Font size for the paragraph */
+    line-height: 1.6; /* Line height for better readability */
+    color: #333; /* Dark gray color for the text */
+    margin: 20px 0; /* Margin above and below the paragraph */
+    text-align: center; /* Center align the text */
+    max-width: 800px; /* Maximum width for the paragraph */
+    margin-left: auto; /* Center the paragraph */
+    margin-right: auto; /* Center the paragraph */
+}
+
+/* Styles for the specifications list */
+/* Models Section Styles */
+.models-section {
+    padding: 50px 20px; /* Add padding around the section */
+    background-color: #f8f8f8; /* Light background color for contrast */
+    text-align: center; /* Center align text within the section */
+}
+
+.models-section h2 {
+    font-size: 48px; /* Large font size for the heading */
+    font-weight: bold; /* Bold font weight */
+    color: #000; /* Black color for the text */
+    margin: 0; /* Remove default margin */
+    text-transform: uppercase; /* Uppercase text for emphasis */
+    letter-spacing: 2px; /* Increase letter spacing for a more dramatic effect */
+}
+
+/* Gallery Row Styles */
+.gallery-row {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    margin: 20px 0; /* Space above and below the gallery row */
+}
+
+.gallery-item {
+    flex: 1; /* Allow each item to grow and fill space */
+    margin: 0 10px; /* Space between gallery items */
+    max-width: 30%; /* Set a maximum width for each item */
+}
+
+.gallery-item img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: add shadow for depth */
+}
+
+/* Specifications Container */
+.specifications-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between items */
+    align-items: flex-start; /* Align items at the start */
+    margin-top: 20px; /* Space above the specifications container */
+    margin-left: 500px;
+}
+
+/* Styles for the specifications list */
+.specifications {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    text-align: left; /* Align text to the left */
+    flex: 1; /* Allow the list to take available space */
+}
+
+.specifications li {
+    font-size: 25px; /* Font size for list items */
+    color: #555; /* Medium gray color for the text */
+    margin: 10px 0; /* Margin above and below each list item */
+}
+
+.specifications li strong {
+    color: #000; /* Black color for the strong text */
+}
+
+/* Styles for the image */
+.image-container {
+    margin-right: 500px;
+    flex: 1; /* Allow the image container to take available space */
+    display: flex; /* Use flexbox for centering the image */
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.model-image {
+    max-width: 120%; /* Responsive image */
+    height: 50%; /* Maintain aspect ratio */
+    width: 130%; /* Adjust width as needed */
+}
+
+/* Technical Details Section Styles */
+.technical-details-section {
+    padding: 50px 20px; /* Add padding around the section */
+    background-color: #f8f8f8; /* Light background color for contrast */
+    color: #333; /* Dark gray text color */
+    text-align: center; /* Center align all text within the section */
+}
+
+.technical-details-section h2 {
+    font-size: 36px; /* Font size for the main heading */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 30px; /* Space below the heading */
+}
+
+.technical-details-section table {
+    width: 100%; /* Full width of the table */
+    max-width: 800px; /* Maximum width for the table */
+    margin: 0 auto; /* Center the table */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+}
+
+.technical-details-section th {
+    background-color: #ffcc00; /* Background color for table headers */
+    color: #000; /* Text color for headers */
+    font-size: 20px; /* Font size for headers */
+    padding: 10px; /* Padding for headers */
+    text-align: left; /* Align text to the left */
+}
+
+.technical-details-section td {
+    background-color: #fff; /* White background for table cells */
+    color: #333; /* Dark gray text color */
+    font-size: 18px; /* Font size for table cells */
+    padding: 10px; /* Padding for table cells */
+    border-bottom: 1px solid #ddd; /* Light gray border below each row */
+}
+
+.technical-details-section tr:hover {
+    background-color: #f1f1f1; /* Light gray background on row hover */
+}
+
+.technical-details-section p {
+    font-size: 18px; /* Font size for the paragraph */
+    margin-top: 20px; /* Space above the paragraph */
+    max-width: 800px; /* Set a maximum width for the paragraph */
+    margin-left: auto; /* Center the paragraph */
+    margin-right: auto; /* Center the paragraph */
+}
+
+.yellow {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the images horizontally */
+    gap: 10px; /* Space between images */
+    margin: 20px 0; /* Margin above and below the image gallery */
+}
+
+.yellow img {
+    width: calc(50% - 10px); /* Set width to 50% minus the gap */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: add shadow for depth */
+}
+
+/* Features Section Styles */
+.features-section {
+    padding: 50px 20px; /* Add padding around the section */
+    background-color: #f8f8f8; /* Light background color for contrast */
+    text-align: center; /* Center align text within the section */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Space items evenly */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.features-section h1 {
+    font-size: 36px; /* Font size for the main heading */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 20px; /* Space below the heading */
+    width: 100%; /* Full width for the heading */
+}
+
+.features-section h3 {
+    font-size: 24px; /* Font size for subheading */
+    font-weight: normal; /* Normal font weight */
+    margin-bottom: 40px; /* Space below the subheading */
+    color: #555; /* Dark gray color for the subheading */
+    width: 100%; /* Full width for the subheading */
+}
+
+.feature {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    margin: 20px; /* Space around each feature */
+    max-width: 300px; /* Set a maximum width for each feature */
+    flex: 1; /* Allow the feature to grow and fill space */
+}
+
+.feature img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional: add shadow for depth */
+    margin-bottom: 15px; /* Space below the image */
+}
+
+.feature p {
+    font-size: 16px; /* Font size for the paragraph */
+    color: #333; /* Dark gray color for the text */
+    text-align: center; /* Center align the text */
+    line-height: 1.5; /* Increase line height for readability */
+}
+
+/* Gallery Section Styles */
+.gallery-section {
+    padding: 50px 20px; /* Add padding around the section */
+    background-color: #f8f8f8; /* Light background color for contrast */
+    text-align: center; /* Center align text within the section */
+}
+
+.gallery-section h2 {
+    font-size: 36px; /* Font size for the main heading */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.gallery-section h3 {
+    font-size: 24px; /* Font size for subheading */
+    font-weight: normal; /* Normal font weight */
+    margin-bottom: 40px; /* Space below the subheading */
+    color: #555; /* Dark gray color for the subheading */
+}
+
+.image-grid {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center the images horizontally */
+}
+
+.image-grid img {
+    width: 450px; /* Fixed width for images */
+    height: 300px; /* Fixed height for images */
+    margin: 10px; /* Space around each image */
+    border: 10px solid #17160d; /* Light border around images */
+    transition-duration: 1s; /* Smooth transition for hover effects */
+}
+
+.image-grid img:hover {
+    border: 5px solid #fff; /* Change border color on hover */
+    -webkit-transform: scale(1.1); /* Scale up the image */
+    -ms-transform: scale(1.1); /* Scale up the image */
+    transform: scale(1.1); /* Scale up the image */
+    filter: none; /* Remove sepia filter on hover */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #bc6c25; /* Footer background color */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 50px; /* Height of the footer */
+    min-width: 100vw; /* Minimum width of the footer */
+}
+
+/* Container Styles */
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 50px 20px; /* Add padding around the section */
+    background-color: #f8f8f8; /* Light background color for contrast */
+    text-align: center; /* Center align text within the section */
+}
+
+.contact-section h2 {
+    font-size: 36px; /* Font size for the main heading */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-section h3 {
+    font-size: 24px; /* Font size for subheading */
+    font-weight: normal; /* Normal font weight */
+    margin-bottom: 40px; /* Space below the subheading */
+    color: #555; /* Dark gray color for the subheading */
+}
+
+.contact-form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    max-width: 600px; /* Set a maximum width for the form */
+    margin: 0 auto; /* Center the form */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 15px; /* Padding inside inputs and textarea */
+    margin-bottom: 20px; /* Space below each input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for inputs and textarea */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #bc6c25; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.contact-form button {
+    background-color: #bc6c25; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 15px 30px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for the button */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.contact-form button:hover {
+    background-color: #a55a1e; /* Darker shade on hover */
+}
+
+/* Dealership Locator Styles */
+.dealership-locator {
+    margin-top: 40px; /* Space above the dealership locator */
+}
+
+.dealership-locator h3 {
+    margin-bottom: 20px; /* Space below the dealership locator heading */
+}
+
+.dealership-locator iframe {
+    width: 100%; /* Full width for the iframe */
+    height: 300px; /* Set height for the iframe */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+}/* Contact Section Styles */
+.contact-section {
+    padding: 50px 20px; /* Add padding around the section */
+    background-color: #f8f8f8; /* Light background color for contrast */
+    text-align: center; /* Center align text within the section */
+}
+
+.contact-section h2 {
+    font-size: 36px; /* Font size for the main heading */
+    font-weight: bold; /* Bold font weight */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-section h3 {
+    font-size: 24px; /* Font size for subheading */
+    font-weight: normal; /* Normal font weight */
+    margin-bottom: 40px; /* Space below the subheading */
+    color: #555; /* Dark gray color for the subheading */
+}
+
+.contact-form {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    max-width: 600px; /* Set a maximum width for the form */
+    margin: 0 auto; /* Center the form */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%; /* Full width for inputs and textarea */
+    padding: 15px; /* Padding inside inputs and textarea */
+    margin-bottom: 20px; /* Space below each input */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for inputs and textarea */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #bc6c25; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.contact-form button {
+    background-color: #bc6c25; /* Button background color */
+    color: #fff; /* Button text color */
+    padding: 15px 30px; /* Padding for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for the button */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.contact-form button:hover {
+    background-color: #a55a1e; /* Darker shade on hover */
+}
+
+/* Dealership Locator Styles */
+.dealership-locator {
+    margin-top: 40px; /* Space above the dealership locator */
+}
+
+.dealership-locator h3 {
+    margin-bottom: 20px; /* Space below the dealership locator heading */
+}
+
+.dealership-locator iframe {
+    width: 100%; /* Full width for the iframe */
+    height: 300px; /* Set height for the iframe */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    color: white;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+/* For Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .hero-section {
+        font-size: 150px; /* Adjust font size for tablets */
+        padding-top: 60px; /* Reduce padding for smaller screens */
+    }
+
+    .background-text {
+        font-size: 100px; /* Adjust background text size for tablets */
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Adjust heading size for tablets */
+    }
+
+    .hero p {
+        font-size: 1.2rem; /* Adjust paragraph size for tablets */
+    }
+
+    .specifications-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        margin-left: 20px; /* Reduce left margin for tablets */
+        margin-right: 20px; /* Reduce right margin for tablets */
+    }
+
+    .specifications {
+        text-align: center; /* Center text for specifications */
+        font-size: 18px; /* Adjust font size for specifications */
+    }
+
+    .specifications li {
+        font-size: 20px; /* Adjust font size for list items */
+        margin: 5px 0; /* Reduce margin for list items */
+    }
+
+
+    .model-image {
+        max-width: 100%; /* Allow the image to take full width */
+        width: 100%; /* Set width to 100% */
+    }
+
+    .gallery-section {
+        padding: 40px 15px; /* Reduce padding for tablets */
+    }
+
+    .gallery-section h2 {
+        font-size: 30px; /* Adjust font size for the main heading */
+    }
+
+    .gallery-section h3 {
+        font-size: 20px; /* Adjust font size for subheading */
+    }
+
+    .image-grid img {
+        width: 350px; /* Adjust width for images on tablets */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+/* For Smaller Screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .hero-section {
+        font-size: 100px; /* Further adjust font size for smaller screens */
+        padding-top: 40px; /* Further reduce padding */
+    }
+
+    .background-text {
+        font-size: 200px; /* Adjust background text size for smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust paragraph size for smaller screens */
+    }
+
+    .specifications-container {
+        align-items: center; /* Center items */
+        margin-left: 0; /* Remove left margin */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .specifications {
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .specifications li {
+        font-size: 18px; /* Further adjust font size for smaller screens */
+    }
+
+    .model-image {
+        max-width: 90%; /* Allow the image to take up more space */
+        width: 90%; /* Set width to 90% */
+    }
+
+    .gallery-section {
+        padding: 30px 10px; /* Further reduce padding for smaller screens */
+    }
+
+    .gallery-section h2 {
+        font-size: 28px; /* Further adjust font size for the main heading */
+    }
+
+    .gallery-section h3 {
+        font-size: 18px; /* Further adjust font size for subheading */
+    }
+
+    .image-grid img {
+        width: 100%; /* Allow images to take full width */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 300px; /* Set a maximum width for images */
+    }
+}
+
+/* For Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .hero-section {
+        font-size: 80px; /* Further adjust font size for mobile devices */
+        padding-top: 20px; /* Further reduce padding */
+    }
+
+    .background-text {
+        font-size: 150px; /* Adjust background text size for mobile devices */
+    }
+
+    .hero h1 {
+        font-size: 1.5rem; /* Adjust heading size for mobile devices */
+    }
+
+    .hero p {
+        font-size: 0.9rem; /* Adjust paragraph size for mobile devices */
+    }
+
+    .specifications-container {
+        margin-top: 10px; /* Reduce top margin for mobile devices */
+    }
+
+    .specifications li {
+        font-size: 16px; /* Further adjust font size for mobile devices */
+    }
+
+}
